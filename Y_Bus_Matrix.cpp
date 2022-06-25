@@ -12,8 +12,7 @@ int main()
 	cin >> n;
 
 	complex<double> arr[n][n],x,y;
-//	cout<<"printing complex number"<<z<<endl;
-//	double arr[n][n];
+
 	memset(arr, 0.0, sizeof arr);
 
 	for (ll i = 0; i < n; i++)
@@ -61,17 +60,6 @@ int main()
 		}
 	}
 
-	//printing
-	cout << "Printing the admittance matrix\n";
-	for (ll i = 0; i < n; i++)
-	{
-		for (ll j = 0; j < n; j++)
-		{
-			cout << arr[i][j]  << " ";
-		}
-		cout << "\n";
-	}
-
 
 	//calculating admittance
 	for (ll i = 0; i < n; i++)
@@ -88,6 +76,7 @@ int main()
 		}
 	}
 
+
 	//calculating diagonal value
 
 	for (ll i = 0; i < n; i++)
@@ -100,12 +89,13 @@ int main()
 		arr[i][i] = x;
 	}
 
+
 	//changing the sign
 	for (ll i = 0; i < n; i++)
 	{
 		for (ll j = 0; j < n; j++)
 		{
-			if (i != j && arr[i][j] != 0.0)arr[i][j] = conj(arr[i][j]);
+			if (i != j && arr[i][j] != 0.0)arr[i][j] = -(arr[i][j]);
 		}
 	}
 
